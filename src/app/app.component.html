@@ -1,2 +1,7 @@
-
-<router-outlet></router-outlet>
+<div class="car-cont">
+  <app-tabs [active]="activeTab" [tabs]="stepList" (tabChange)="updateStep($event)" [disabledTabs]="disabledStepList"></app-tabs>
+  <div class="car-details-page">
+    <router-outlet></router-outlet>
+    <app-car-image></app-car-image>
+  </div>
+</div>
